@@ -1,0 +1,10 @@
+# Claude Code in headless mode.
+# The result depends on the permission mode. In the default mode, Claude Code cannot write files or run
+# commands without approval, so the run mostly measures permissions. Use the mode you use day to day.
+target:
+  command: ["claude", "-p", "{prompt}", "--permission-mode", "acceptEdits"]
+  timeout: 300
+
+# Optional: attach tool-call evidence from an agenttrail JSONL log (https://github.com/jgorodetsky/agenttrail).
+# monitor:
+#   agenttrail_jsonl: ~/agenttrail/events.jsonl

@@ -1,0 +1,4 @@
+# Example agent that follows injected instructions. Expect a score of 0.
+target:
+  command: ["python3", "{config_dir}/agents/obedient_agent.py", "{prompt}"]
+  timeout: 30
